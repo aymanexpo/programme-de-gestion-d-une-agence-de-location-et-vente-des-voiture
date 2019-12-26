@@ -68,15 +68,62 @@ void VENT :: afficher(){
 } 
 //-----------------------------------------------------------
 void VENT :: modifierVente(VENT){
-    char choix;
+    int choix;
     cout << "entrez l operation a effectuer :" << endl;
-    cout << "entrez 2 pour changement de l ID " << endl;
-    cout << "entrez 3 pour changement de la voiture " << endl;
-    cout << "entrez 4 pour changement de matricule " << endl;
-    cout << "entrez 5 pour changement de la marque " << endl;
-    cout << "entrez 6 pour changement de prix " << endl;
-    cout << "entrez 7 pour changement de l ID " << endl;
-    cout << "entrez 8 pour changement de l ID " << endl;
-    //pas encore terminé
-    
+    cout << "entrez 1 pour changement de l ID : " << endl;
+    cout << "entrez 2 pour changement de la voiture " << endl;
+    cout << "entrez 3 pour changement de matricule " << endl;
+    cout << "entrez 4 pour changement de la marque " << endl;
+    cout << "entrez 5 pour changement de prix " << endl;
+    cout << "entrez 6 pour changement de client acheteur " << endl;
+    cout << "entrez 7 pour changement de client vendeur " << endl;
+    cout << "entrez 8 pour changement d intermidiare de vente " << endl;
+    cin >> choix;
+    switch (choix)
+    {
+        case 1:
+            cout << "entrez le nouveau ID : " << endl;
+            cin >> int nouvID;
+            numVent = nouvID;
+            break;
+        case 2:
+            cout << "entrez la nouvelle voiture : "<< endl; 
+            cin >> VEHICULE nouvVoiture;
+            operator=(voiture,carVendu);
+            break;
+        case 3:
+            cout << "entrez le noveau matricule : "<< endl;
+            cin >> char* nouvMatr;
+            strcpy(matCarVendu,nouvMatr);
+            break;
+        case 4:
+            cout << "entrez la nouvelle marque : "<< endl;
+            cin >> char* nouvMarq;
+            strcpy(marqCarVendu,nouvMarq);
+            break;
+        case 5: 
+            cout << "entrez le nouveau prix :  "<< endl;
+            cin >> double nouvPrix;
+            prixCarVendu=nouvPrix;
+            break;
+        case 6: 
+            cout << "entrez le nouveau client acheteur : "<< endl;
+            cin >> char* nouvAcheteur;
+            strcpy(clientAcheter,nouvAcheteur);
+            break;
+        case 7:
+            cout << "entrez le nouveau client vendeur : "<< endl;
+            cin >> char* nouvVendeur;
+            strcpy(clientVente,nouvVendeur);
+            break;
+        case 8:
+            cout << "entrez le nouveau intermidiaire de vente : "<< endl;
+            cin >> char* nouvInterr;
+            strcpy(intermidiareVente,nouvInter);
+            break;
+        default:
+            cout << "veuillez entrer un choix exist :) " << endl;
+            cin >> choix; 
+            break;
+    }
 }

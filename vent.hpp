@@ -27,6 +27,6 @@
             ~VENT();//distructeur des cases memoires de la classe 
             //-----------------------------------------------------
             void afficher();
-            void modifierVente(VENT);//
+            void modifierVente(VENT);
     };
 #endif

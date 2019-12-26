@@ -43,3 +43,10 @@ void VEHICULE::afficher(){
     cout << "matricule : " << matricule << endl;
     cout << "prix : " << prix << endl;
 } 
+// surcharge de l operator=  de reception 
+VEHICULE  VEHICULE :: operator=(VEHICULE V1,VEHICULE V2){
+    strcpy(V1.marque,V2.marque);
+    strcpy(V1.matricule,V2.matricule);
+    V1.prix=V2.prix;
+    V1.owner=V2.owner;
+} 

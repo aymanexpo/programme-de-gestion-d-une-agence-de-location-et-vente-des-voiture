@@ -26,6 +26,8 @@
             void modifier(char*);
             bool operator<(VEHICULE);// pour la comparaison entre prisx de voiture et une autre voiture donnée 
             void vehiculeOwn(OWNER);
-            // complet 
+            //------------------------------------------
+            // operators surchargé:
+            VEHICULE operator=(VEHICULE,VEHICULE);
     };    
 #endif
